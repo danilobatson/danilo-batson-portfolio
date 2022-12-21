@@ -13,15 +13,6 @@ def home_page():
 def thank_you():
     '''Renders thank you page.'''
     return render_template("thank_you.html")
-
-def write_to_file(data):
-    '''Writes data to a file.'''
-    with open("database.txt", mode="a") as database:
-        name = data["name"]
-        email = data["email"]
-        subject = data["subject"]
-        message = data["message"]
-        file = database.write(f"\n{name}, {email}, {subject}, {message}")
         
 def write_to_csv(data):
     '''Writes data to a csv file.'''
